@@ -185,4 +185,17 @@ ul li::before{
   p{
   max-width:65ch;
 }
+footer{
+    margin-top:24px;
+    padding-top:16px;
+    font-size:0.8rem;
+    line-height:1.4;
+  }
+   footer p{
+    margin-bottom:8px;
+  }
+
+  footer p:last-child{
+    margin-bottom:0;
+  }
 }
