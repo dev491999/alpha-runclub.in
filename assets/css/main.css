@@ -66,11 +66,28 @@ footer{
   margin:0;
   padding:0;
 }
+.now{
+  font-size:0.95rem;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.now::before{
+  content:"● ";
+  color:var(--primary);
+}
+
 .invite {
   margin-top:48px;
   font-weight:500;
   color:var(--primary);
 }
+.quiet{
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-top:24px;
+}
+
 .reflections p{
   font-style:italic;
   color:var(--muted);
