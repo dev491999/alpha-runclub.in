@@ -1,0 +1,143 @@
+
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Color variables */
+:root{
+  --primary:#ff1744;
+  --text:#1f2121;
+  --border:#e0e0e0;
+  --soft:#fafafa;
+  --muted:#777;
+  --surface:#ffffff;
+}
+
+
+/* Page foundation */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffffff;
+  color: #1f2121;
+  line-height: 1.6;
+  background:var(--soft);
+  color:var(--text);
+}
+header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+text-decoration:none;
+  color:var(--text);
+  font-size:0.9rem;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+/* Content container */
+main {
+  background:var(--surface);
+  border-radius:16px;
+  padding:64px 48px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+footer{
+ margin-top:32px;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+  font-size:0.85rem;
+  color:var(--muted);
+  text-align:center;
+}
+#site-footer{
+  margin:0;
+  padding:0;
+}
+.invite {
+  margin-top:48px;
+  font-weight:500;
+  color:var(--primary);
+}
+.reflections p{
+  font-style:italic;
+  color:var(--muted);
+  margin-bottom:20px;
+  max-width:600px;
+}
+main > *:last-child{
+  margin-bottom:0;
+}
+/* Vertical rhythm */
+h1{
+  font-size:2rem;
+  margin-bottom:24px;
+  color:var(--primary);
+}
+h2 {
+  font-size: 1.2rem;
+  margin: 48px 0 16px;
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+ul {
+  margin-left: 20px;
+  list-style:none;
+}
+
+li {
+  margin-bottom: 12px;
+}
+main h1{
+  color:var(--primary);
+}
+ul li{
+  position:relative;
+  padding-left:18px;
+}
+
+ul li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:var(--primary);
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background:#0f0f0f;
+    color:#eaeaea;
+  }
+
+  main{
+    background:#161616;
+    box-shadow:0 12px 32px rgba(0,0,0,.6);
+  }
+
+  nav a{
+    text-decoration:none;
+  color:var(--text);
+  font-size:0.9rem;
+  }
+  
+nav a:hover{
+  color:var(--primary);
+}
+}
