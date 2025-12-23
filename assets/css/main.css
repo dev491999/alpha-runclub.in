@@ -138,7 +138,7 @@ ul li::before{
 /* Dark mode */
 
 @media (prefers-color-scheme: dark) {
-  body{
+   body{
     background:#0f0f0f;
     color:#eaeaea;
   }
@@ -148,13 +148,41 @@ ul li::before{
     box-shadow:0 12px 32px rgba(0,0,0,.6);
   }
 
-  nav a{
-    text-decoration:none;
-  color:var(--text);
-  font-size:0.9rem;
+  header{
+    border-bottom:1px solid rgba(255,255,255,.06);
   }
-  
-nav a:hover{
-  color:var(--primary);
+
+  footer{
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#aaa;
+  }
+
+  nav a{
+    color:#eaeaea;
+  }
+
+  nav a:hover{
+    color:var(--primary);
+  }
+    .now{
+    color:#bdbdbd;
+  }
+}
+/* Responsive design */
+@media (max-width: 640px) {
+  main{
+    padding:40px 20px;
+    border-radius:12px;
+  }
+ 
+  nav a{
+    font-size:0.85rem;
+    padding:6px 0;
+  }
+   h1{
+    font-size:1.6rem;
+  }
+  p{
+  max-width:65ch;
 }
 }
