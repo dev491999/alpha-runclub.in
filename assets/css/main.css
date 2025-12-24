@@ -29,12 +29,12 @@ body {
 header {
   max-width: 720px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 40px;
 }
 
 nav {
   display: flex;
-  gap: 24px;
+  gap: 64px;
 }
 
 nav a {
@@ -50,13 +50,13 @@ nav a:hover{
 /* Content container */
 main {
   background:var(--surface);
-  border-radius:16px;
-  padding:64px 48px;
+  border-radius:1px;
+  padding:11px 68px;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 footer{
  margin-top:0px;
-  padding-top:10px;
+  padding-top:1px;
   border-top:1px solid var(--border);
   font-size:0.85rem;
   color:var(--muted);
@@ -81,11 +81,13 @@ footer{
   margin-top:48px;
   font-weight:500;
   color:var(--primary);
+  margin-bottom:10px;
 }
 .quiet{
   font-size:0.9rem;
   color:var(--muted);
   margin-top:24px;
+   margin-bottom:10px;
 }
 
 .reflections p{
@@ -171,8 +173,8 @@ ul li::before{
 /* Responsive design */
 @media (max-width: 640px) {
   main{
-    padding:50px 20px;
-    border-radius:19px;
+    padding:40px 20px;
+    border-radius:12px;
   }
  
   nav a{
@@ -186,16 +188,16 @@ ul li::before{
   max-width:65ch;
 }
 footer{
-    margin-top:2px;
-    padding-top:1px;
+    margin-top:24px;
+    padding-top:16px;
     font-size:0.8rem;
-    line-height:1;
+    line-height:1.4;
   }
    footer p{
-    margin-bottom:0px;
+    margin-bottom:8px;
   }
 
   footer p:last-child{
-    margin-bottom:10;
+    margin-bottom:0;
   }
 }
