@@ -197,6 +197,7 @@ ul li::before{
   font-weight:600;
   color:var(--primary);
   font-size:0.9rem;
+  margin-left: 20px;
 }
 
 .run-detail{
