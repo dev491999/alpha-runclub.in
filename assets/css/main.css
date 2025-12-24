@@ -238,6 +238,246 @@ ul li::before{
 }
 
 /*join button */
+
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Color variables */
+:root{
+  --primary:#ff1744;
+  --text:#1f2121;
+  --border:#e0e0e0;
+  --soft:#fafafa;
+  --muted:#777;
+  --surface:#ffffff;
+}
+
+
+/* Page foundation */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffffff;
+  color: #1f2121;
+  line-height: 1.6;
+  background:var(--soft);
+  color:var(--text);
+}
+header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 64px;
+}
+
+nav a {
+text-decoration:none;
+  color:var(--text);
+  font-size:0.9rem;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+/* Content container */
+main {
+  background:var(--surface);
+  border-radius:1px;
+  padding:11px 68px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+footer{
+ margin-top:0px;
+  padding-top:1px;
+  border-top:1px solid var(--border);
+  font-size:0.85rem;
+  color:var(--muted);
+  text-align:center;
+}
+#site-footer{
+  margin:0;
+  padding:0;
+}
+.now{
+  font-size:0.95rem;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.now::before{
+  content:"● ";
+  color:var(--primary);
+}
+
+.invite {
+  margin-top:48px;
+  font-weight:500;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+.quiet{
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-top:24px;
+   margin-bottom:10px;
+}
+
+.reflections p{
+  font-style:italic;
+  color:var(--muted);
+  margin-bottom:20px;
+  max-width:600px;
+}
+main > *:last-child{
+  margin-bottom:0;
+}
+/* Vertical rhythm */
+h1{
+  font-size:2rem;
+  margin-bottom:24px;
+  color:var(--primary);
+}
+h2 {
+  font-size: 1.2rem;
+  margin: 48px 0 16px;
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+ul {
+  margin-left: 20px;
+  list-style:none;
+}
+
+li {
+  margin-bottom: 12px;
+}
+main h1{
+  color:var(--primary);
+}
+ul li{
+  position:relative;
+  padding-left:18px;
+}
+
+ul li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:var(--primary);
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+   body{
+    background:#0f0f0f;
+    color:#eaeaea;
+  }
+
+  main{
+    background:#161616;
+    box-shadow:0 12px 32px rgba(0,0,0,.6);
+  }
+
+  header{
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+
+  footer{
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#aaa;
+  }
+
+  nav a{
+    color:#eaeaea;
+  }
+
+  nav a:hover{
+    color:var(--primary);
+  }
+    .now{
+    color:#bdbdbd;
+  }
+}
+/*calendar*/
+.upcoming{
+  margin-top:48px;
+}
+
+.run-list{
+  list-style:none;
+  padding:0;
+  margin-top:16px;
+}
+
+.run-list li{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.run-list li:last-child{
+  border-bottom:none;
+}
+
+.run-day{
+  font-weight:600;
+  color:var(--primary);
+  font-size:0.9rem;
+}
+
+.run-detail{
+  font-size:0.9rem;
+  color:var(--text);
+}
+
+/*calendar button */
+
+.calendar-btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:20px;
+
+  padding:8px 14px;
+  height:40px;
+
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+
+  font-size:0.85rem;
+  letter-spacing:0.04em;
+}
+
+.calendar-btn:hover{
+  background:#e52e26;
+}
+
+.calendar-btn .svg-icon{
+  transition:transform 0.3s ease;
+}
+
+.calendar-btn:hover .svg-icon{
+  transform:rotate(10deg);
+}
+
+/*join button */
 .join-btn{
   display:flex;
   align-items:center;
@@ -256,7 +496,68 @@ ul li::before{
   font-size:0.85rem;
   letter-spacing:0.04em;
 }
+.join-btn svg{
+  width:18px;
+  height:18px;
+}
+.join-btn:hover{
+  background:#e52e26;
+}
 
+.join-btn .svg-icon{
+  transition:transform 0.3s ease;
+}
+
+.join-btn:hover .svg-icon{
+  transform:translateX(3px);
+}
+
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .join-btn{
+    width:100%;
+    justify-content:center;
+  }
+  main{
+    padding:40px 20px;
+    border-radius:12px;
+  }
+ .upcoming{
+    margin-top:32px;
+  }
+
+  .run-list li{
+    padding:10px 0;
+  }
+  nav a{
+    font-size:0.85rem;
+    padding:6px 0;
+  }
+   h1{
+    font-size:1.6rem;
+  }
+  p{
+  max-width:65ch;
+  .calendar-btn{
+    width:100%;
+    justify-content:center;
+  }
+}
+footer{
+    margin-top:24px;
+    padding-top:16px;
+    font-size:0.8rem;
+    line-height:1.4;
+  }
+   footer p{
+    margin-bottom:8px;
+  }
+
+  footer p:last-child{
+    margin-bottom:0;
+  }
+}
 .join-btn:hover{
   background:#e52e26;
 }
