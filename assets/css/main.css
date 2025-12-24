@@ -170,13 +170,54 @@ ul li::before{
     color:#bdbdbd;
   }
 }
+/*calendar*/
+.upcoming{
+  margin-top:48px;
+}
+
+.run-list{
+  list-style:none;
+  padding:0;
+  margin-top:16px;
+}
+
+.run-list li{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.run-list li:last-child{
+  border-bottom:none;
+}
+
+.run-day{
+  font-weight:600;
+  color:var(--primary);
+  font-size:0.9rem;
+}
+
+.run-detail{
+  font-size:0.9rem;
+  color:var(--text);
+}
+
+
 /* Responsive design */
 @media (max-width: 640px) {
   main{
     padding:40px 20px;
     border-radius:12px;
   }
- 
+ .upcoming{
+    margin-top:32px;
+  }
+
+  .run-list li{
+    padding:10px 0;
+  }
   nav a{
     font-size:0.85rem;
     padding:6px 0;
