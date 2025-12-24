@@ -171,8 +171,8 @@ ul li::before{
 /* Responsive design */
 @media (max-width: 640px) {
   main{
-    padding:40px 20px;
-    border-radius:12px;
+    padding:50px 20px;
+    border-radius:19px;
   }
  
   nav a{
@@ -186,16 +186,16 @@ ul li::before{
   max-width:65ch;
 }
 footer{
-    margin-top:24px;
-    padding-top:16px;
+    margin-top:2px;
+    padding-top:1px;
     font-size:0.8rem;
-    line-height:1.4;
+    line-height:1;
   }
    footer p{
-    margin-bottom:8px;
+    margin-bottom:0px;
   }
 
   footer p:last-child{
-    margin-bottom:0;
+    margin-bottom:10;
   }
 }
