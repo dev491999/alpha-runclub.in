@@ -221,7 +221,7 @@ ul li::before{
   border-radius:16px 16px 0 0;
   overflow:hidden;
 
-  background-image:url("../images/community/alpha-group.jpg");
+  background-image:url("assets/images/community/alpha-group.jpg");
   background-size:cover;
   background-position:center bottom;
 }
