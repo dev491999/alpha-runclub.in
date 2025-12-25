@@ -67,9 +67,14 @@ footer{
   padding:0;
 }
 .now{
-  font-size:0.95rem;
-  color:var(--muted);
+  font-size:3.95rem;
+  color:#ffffff;
   margin-bottom:16px;
+
+  background:rgba(0,0,0,0.35);
+  padding:6px 10px;
+  border-radius:12px;
+  display:inline-block;
 }
 
 .now::before{
@@ -203,6 +208,41 @@ ul li::before{
 .run-detail{
   font-size:0.9rem;
   color:var(--text);
+}
+/*herosection*/
+.hero{
+  position:relative;
+  min-height:70vh;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+
+  margin:-14px -68px 28px;
+  border-radius:16px 16px 0 0;
+  overflow:hidden;
+
+  background-image:url("../images/community/alpha-group.jpg");
+  background-size:cover;
+  background-position:center bottom;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.55) 35%,
+    rgba(0,0,0,0.35) 60%,
+    rgba(0,0,0,0.15) 100%
+  );
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:#fff;
+  max-width:720px;
+  padding:48px 24px 0; /* top spacing added */
 }
 
 /*calendar button */
@@ -516,7 +556,15 @@ ul li::before{
 
 
 /* Responsive design */
-@media (max-width: 640px) {
+@media (max-width: 640px) { 
+  .hero-content{
+    padding:32px 20px 0;
+  }
+
+  .hero-title{
+    font-size:2.4rem;
+    letter-spacing:0.08em;
+  }
   .join-btn{
     width:100%;
     justify-content:center;
@@ -602,6 +650,10 @@ footer{
   .calendar-btn{
     width:100%;
     justify-content:center;
+  }
+    .now{
+    font-size:0.9rem;
+    padding:6px 8px;
   }
 }
 footer{
